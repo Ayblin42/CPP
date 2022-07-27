@@ -4,13 +4,11 @@ FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-SRCS		=	PhoneBook.cpp \
-				main.cpp \
-				Contact.cpp
+SRCS		=	Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	PhoneBook
+NAME		=	Zombie
 
 all			:		${NAME}
 
