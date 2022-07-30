@@ -6,15 +6,19 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 10:17:19 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/30 10:19:21 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/07/30 16:18:33 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
 
 class HumanB
 {
 public:
 
+
+	void	attack();
 private:
-	std::str
+	std::string _name;
+	Weapon _Weapon;
 }

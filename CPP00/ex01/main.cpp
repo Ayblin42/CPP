@@ -22,7 +22,7 @@ void addContact(Phonebook *phonebook)
 	std::cout <<GRN<< "Nickname: "<<YEL;
 	std::getline(std::cin, str);
 	contact.setNickName(str);
-	while(1)
+	while(!std::cin.eof())
 	{
 	std::cout <<GRN<< "Phone number: "<<YEL;
 	std::getline(std::cin, str);
@@ -72,7 +72,7 @@ void searchContact(Phonebook *phonebook)
 	{
 		std::string str;
 		std::cout <<GRN<< "Please enter an index for relevant information: "<<YEL;
-		while (1)
+		while (!std::cin.eof())
 		{
 			std::cin >> i;
 			if(i > 0 && i <= count)
@@ -108,7 +108,7 @@ int main()
 	std::cout << " -SEARCH: search for a contact in the phonebook" << std::endl;
 	std::cout << " -EXIT: quit the program" << std::endl;
 
-	while (1)
+	while (!std::cin.eof())
 	{
 		std::string command;
 		std::cout <<GRN<< std::endl << "Enter a command: "<<YEL;

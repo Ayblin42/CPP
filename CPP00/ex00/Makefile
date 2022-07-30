@@ -6,7 +6,7 @@ RM			=	rm -f
 
 SRCS		=	megaphone.cpp
 
-OBJS		=	${SRCS:.c=.o}
+OBJS		=	${SRCS:.cpp=.o}
 
 NAME		=	megaphone
 
