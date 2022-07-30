@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 15:08:54 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/27 17:05:37 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/07/29 11:51:50 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 Zombie::Zombie(std::string name) :
 	_name(name)
+{
+
+}
+
+Zombie::Zombie( void )
 {
 
 }

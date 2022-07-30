@@ -4,11 +4,11 @@ FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-SRCS		=	Zombie.cpp main.cpp zombieHorde.cpp
+SRCS		=	main.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	Zombie
+NAME		=	REF
 
 all			:		${NAME}
 

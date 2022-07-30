@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 14:36:31 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/29 11:51:08 by ayblin           ###   ########.fr       */
+/*   Created: 2022/07/30 10:01:21 by ayblin            #+#    #+#             */
+/*   Updated: 2022/07/30 10:16:42 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#ifndef WEAPON_H
+# define WEAPON_H
 
 # include <string>
 # include <iostream>
@@ -29,24 +29,19 @@
 # define CYN  "\x1B[36m"
 # define WHT  "\x1B[37m"
 
-class Zombie
+class Weapon
 {
 public:
+	Weapon();
+	~Weapon();
 
-	Zombie();
-	Zombie(std::string name);
-	~Zombie();
-	// Getters
-	void announce( void ) const;
-	//Setters
-	void setName(std::string name);
+	//getters
+	std::string	&stgetType() const;
+	//setters
+		void	setType(std::string);
 
-private:
-
-		std::string _name;
-
-};
-
-Zombie* zombieHorde( int N, std::string name );
+private :
+	std::string type;
+}
 
 #endif

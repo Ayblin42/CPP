@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/ayblin/CPP'
+make: Leaving directory '/home/ayblin/CPP'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
