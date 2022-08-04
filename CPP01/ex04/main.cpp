@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:47:40 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/01 19:00:20 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/03 16:22:39 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,18 @@
 
 int main(int ac, char **av)
 {
+	if (ac != 4)
+		return(std::cout << "  invalid number of arguments"<< std::endl,0);
 	std::string filename(av[1]);
 	std::string s1(av[2]);
 	std::string s2(av[3]);
-	std::ifstream ifs("numbers");
 	std::string line;
 	std::size_t found;
+	std::ofstream ofs(filename.append(".replace").data());
+	std::ifstream ifs("numbers");
 
+	if (!ifs.good())
+		return(std::cout << "invalid file name "<< std::endl,0);
 	while(ifs.good())
 	{
 		std::getline(ifs,line);
@@ -32,7 +37,8 @@ int main(int ac, char **av)
 			line.insert(found, s2);
 			found = line.find(s1, found);
 		}
-		std::cout << line <<std::endl;
-		std::cout << std::endl;
+		ofs << line<< std::endl;
 	}
+	ifs.close();
+	ofs.close();
 }

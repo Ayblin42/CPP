@@ -5,11 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
-make: *** No rule to make target 'all'.  Stop.
 
-
-# Make data base, printed on Sat Jul 30 09:20:48 2022
+# Make data base, printed on Wed Aug  3 19:25:53 2022
 
 # Variables
 
@@ -44,13 +41,13 @@ VSCODE_CWD = /mnt/c/Users/Aymeric/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/ayblin/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Aymeric/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Aymeric/AppData/Local/Programs/Microsoft VS Code/bin
+PATH = /home/ayblin/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Aymeric/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Aymeric/AppData/Local/Programs/Microsoft VS Code/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-bd219f60-9b0b-44cf-8886-b59497aebab6.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-fb7fee19-7927-4457-9aa7-0d2dfef5c1b8.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -62,7 +59,7 @@ PWD = /home/ayblin/CPP
 # default
 .LOADED := 
 # environment
-WT_SESSION = efc2f3a0-3542-425a-9218-93ddcc487848
+WT_SESSION = 076ba362-3cec-447f-bcbd-6936b137c094
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -154,7 +151,7 @@ WSL_DISTRO_NAME = Ubuntu20.04LTS
 
 # Directories
 
-# . (device 2, inode 11540474045359921): 6 files, no impossibilities.
+# . (device 2, inode 14355223812297721): 6 files, no impossibilities.
 
 # 6 files, no impossibilities in 1 directories.
 
@@ -212,6 +209,8 @@ GNUmakefile:
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Sat Jul 30 09:20:48 2022
+# Finished Make data base on Wed Aug  3 19:25:53 2022
 
  
+make: *** No rule to make target 'all'.  Stop.
+
