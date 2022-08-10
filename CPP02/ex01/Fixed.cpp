@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 12:53:58 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/10 13:02:52 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/10 15:33:29 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ Fixed::Fixed(const Fixed &other) // Constructeur de recopie
 Fixed& Fixed::operator=(const Fixed	&aff) // Operator d’affectation
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	this->_VirguleFixe = aff.getRawBits();
+	this->_virgulefixe = aff.getRawBits();
 	return *this;
 }
 
 int Fixed::getRawBits( void ) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return this->_VirguleFixe;
+	return this->_virgulefixe;
 }
 
 void	Fixed::setRawBits( int const raw )
@@ -70,7 +70,7 @@ std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 
 float Fixed::toFloat(void) const
 {
-	return float((this->_virgulefixe) / (1 << _bits));
+	return float((this->_virgulefixe) / (float)(1 << _bits));
 }
 
 int Fixed::toInt(void) const
