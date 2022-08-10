@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ayblin/CPP/CPP00/ex01'
+g++    -c -o PhoneBook.o PhoneBook.cpp
+g++    -c -o main.o main.cpp
+g++    -c -o Contact.o Contact.cpp
+c++ -Wall -Werror -Wextra -std=c++98 PhoneBook.o main.o Contact.o -o PhoneBook
+make: Leaving directory '/home/ayblin/CPP/CPP00/ex01'
+ 

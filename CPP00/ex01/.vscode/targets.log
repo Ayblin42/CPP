@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 10 12:31:54 2022
+# Make data base, printed on Tue Aug  9 13:57:59 2022
 
 # Variables
 
@@ -15,7 +15,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # automatic
@@ -25,17 +25,21 @@ WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/ayblin/CPP
+CURDIR := /home/ayblin/CPP/CPP00/ex01
 # makefile
 SHELL = /bin/sh
+# makefile (from 'Makefile', line 5)
+RM = rm -f
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/ayblin/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/node
-# makefile
-MAKEFILE_LIST := 
+_ = /mnt/c/Users/Aymeric/AppData/Local/Programs/Microsoft VS Code/bin/code
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # 'override' directive
 GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 11)
+OBJS = $(SRCS:%.cpp=%.o)
 # environment
 VSCODE_CWD = /mnt/c/Users/Aymeric/AppData/Local/Programs/Microsoft VS Code
 # default
@@ -47,7 +51,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-83a8fa16-0918-4b6b-a7d4-241e07ba5e44.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-2718e0e7-bb25-4dab-8184-5e3b183add3d.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -55,9 +59,11 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-PWD = /home/ayblin/CPP
+PWD = /home/ayblin/CPP/CPP00/ex01
 # default
 .LOADED := 
+# environment
+WT_SESSION = b4534573-9d2e-481d-b412-f6b4b8cf4fcb
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -78,16 +84,20 @@ MAKELEVEL := 0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# makefile (from 'Makefile', line 7)
+SRCS = PhoneBook.cpp main.cpp Contact.cpp
 # environment
-SHLVL = 0
+SHLVL = 1
+# makefile (from 'Makefile', line 1)
+CC = c++
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = ayblin
 # makefile
-.DEFAULT_GOAL := 
-# environment
-NAME = DESKTOP-GN4FTAE
+.DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 13)
+NAME = PhoneBook
 # environment
 LESS = -R
 # automatic
@@ -114,6 +124,8 @@ MFLAGS = -pqrR
 +F = $(notdir $+)
 # environment
 VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {f184b75f-6c82-5ea5-9b3e-3203d66c5f82}
 # default
 MAKEFILES := 
 # automatic
@@ -128,6 +140,8 @@ HOSTTYPE = x86_64
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+# makefile (from 'Makefile', line 3)
+FLAGS = -Wall -Werror -Wextra -std=c++98
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -139,7 +153,7 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu20.04LTS
 # variable set hash-table stats:
-# Load=64/1024=6%, Rehash=0, Collisions=4/86=5%
+# Load=71/1024=7%, Rehash=0, Collisions=6/101=6%
 
 # Pattern-specific Variable Values
 
@@ -147,9 +161,9 @@ WSL_DISTRO_NAME = Ubuntu20.04LTS
 
 # Directories
 
-# . (device 2, inode 14355223812297721): 7 files, no impossibilities.
+# . (device 2, inode 10414574138467782): 12 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -157,26 +171,53 @@ WSL_DISTRO_NAME = Ubuntu20.04LTS
 
 # Files
 
-# Not a target:
-all:
+all: PhoneBook
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: all clean fclean re libft
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libft:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-08-03 10:06:54.7007225
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 
 # Not a target:
-makefile:
+Contact.o:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-08-03 10:06:54.7007225
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 21):
+				${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+				${RM} ${NAME}
 
 # Not a target:
 .DEFAULT:
@@ -184,29 +225,56 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 24):
+				${RM} ${OBJS}
+
+# Not a target:
+main.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-03 10:06:54.7047116
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+PhoneBook: PhoneBook.o main.o Contact.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-09 13:56:37.8075095
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 18):
+				${CC} ${FLAGS} ${OBJS} -o ${NAME}
+
+# Not a target:
+PhoneBook.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-03 10:06:54.7037141
+#  File has been updated.
+#  Successfully updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/38=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 121 B / avg = 8 B
-# current buf: size = 8162 B / used = 121 B / count = 15 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 199 B / avg = 8 B
+# current buf: size = 8162 B / used = 199 B / count = 23 / avg = 8 B
 
-# strcache performance: lookups = 18 / hit rate = 16%
+# strcache performance: lookups = 47 / hit rate = 51%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
-# Finished Make data base on Wed Aug 10 12:31:54 2022
+# Load=23/8192=0%, Rehash=0, Collisions=1/47=2%
+# Finished Make data base on Tue Aug  9 13:57:59 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-
