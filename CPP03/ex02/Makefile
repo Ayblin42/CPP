@@ -4,11 +4,11 @@ FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-SRCS		=	main.cpp ClapTrap.cpp
+SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	ex00
+NAME		=	a.out
 
 all			:		${NAME}
 

@@ -19,26 +19,25 @@
 ClapTrap::ClapTrap()
 	:_Name("default"), _Pdv(10), _Mana(10), _AD(0)
 {
-	std::cout << "Default constructor called" << NRM<<std::endl;
+	std::cout << "ClapTrap " << this->_Name << " Default Constructor is called" << NRM<<std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 	:_Name(name), _Pdv(10), _Mana(10), _AD(0)
 {
-	std::cout << "Named constructor called" << NRM<<std::endl;
+	std::cout << "ClapTrap " << this->_Name << " Named Constructor is called" << NRM<<std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Default Destructor called" << NRM<<std::endl;
+	std::cout << "ClapTrap " << this->_Name << " Default Destructor is called" << NRM<<std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other) // Constructeur de recopie
 {
-	std::cout << "Copy  COnstructor called" << NRM<<std::endl;
+	std::cout << "ClapTrap " << this->_Name << " Copy Constructor is called" << NRM<<std::endl;
 	*this = other;
 }
-
 
 /* ************************************************************************** */
 /*                                OPERATOR                                    */
@@ -120,8 +119,6 @@ void ClapTrap::beRepaired(unsigned int amount){
 		this->_Mana--;
 	}
 }
-
-
 
 void ClapTrap::takeDamage(unsigned int amount){
 	if(this->_Pdv <= 0){

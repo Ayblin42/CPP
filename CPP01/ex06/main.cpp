@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:09:29 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/04 00:03:06 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/11 15:13:21 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int main(int ac, char **av)
 			Harl.complain("ERROR");
 			break;
 		default:
-			std::cout << "Default Harl complain" <<std::endl;}
+			std::cout << "Default Harl complain" <<NRM<<std::endl;}
 }

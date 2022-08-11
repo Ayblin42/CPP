@@ -51,12 +51,12 @@ void searchContact(Phonebook *phonebook)
 	int count;
 
 	count = phonebook->getCount();
-	std::cout << "┌──────────┬──────────┬──────────┬──────────┐" << std::endl;
+	std::cout << "┌──────────┬──────────┬──────────┬──────────┐" << NRM<<std::endl;
 	std::cout << "│" << std::setw(10) << std::right << "index";
 	std::cout << "│" << std::setw(10) << std::right << "first name";
 	std::cout << "│" << std::setw(10) << std::right << "last name";
-	std::cout << "│" << std::setw(10) << std::right << "nickname" << "│" << std::endl;
-	std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
+	std::cout << "│" << std::setw(10) << std::right << "nickname" << "│" << NRM<<std::endl;
+	std::cout << "├──────────┼──────────┼──────────┼──────────┤" << NRM<<std::endl;
 	for (int i=0; i < phonebook->getCount(); i++)
 	{
 		Contact contact;
@@ -64,9 +64,9 @@ void searchContact(Phonebook *phonebook)
 		std::cout << "|" << std::setw(10) << i + 1;
 		std::cout << "|" << std::setw(10) << decoupage(contact.getFirstName());
 		std::cout << "|" << std::setw(10) << decoupage(contact.getLastName());
-		std::cout << "|" << std::setw(10) << decoupage(contact.getNickName()) << "|" << std::endl;
+		std::cout << "|" << std::setw(10) << decoupage(contact.getNickName()) << "|" << NRM<<std::endl;
 	}
-	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << std::endl;
+	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << NRM<<std::endl;
 
 	if (count > 0)
 	{
@@ -85,16 +85,16 @@ void searchContact(Phonebook *phonebook)
 		i--;
 		Contact tmp;
 		tmp = phonebook->getContact(i);
-		std::cout <<GRN<< std::endl;
-		std::cout <<GRN<< "First name - " <<YEL<< tmp.getFirstName() << std::endl;
-		std::cout <<GRN<< "Last name - " <<YEL<< tmp.getLastName() << std::endl;
-		std::cout <<GRN<< "Nickname - " <<YEL<< tmp.getNickName() << std::endl;
-		std::cout <<GRN<< "Phone number - " <<YEL<< tmp.getPhoneNumber() << std::endl;
-		std::cout <<GRN<< "Darkest secret - " <<YEL<< tmp.getSecret() << std::endl;
+		std::cout <<GRN<< NRM<<std::endl;
+		std::cout <<GRN<< "First name - " <<YEL<< tmp.getFirstName() << NRM<<std::endl;
+		std::cout <<GRN<< "Last name - " <<YEL<< tmp.getLastName() << NRM<<std::endl;
+		std::cout <<GRN<< "Nickname - " <<YEL<< tmp.getNickName() << NRM<<std::endl;
+		std::cout <<GRN<< "Phone number - " <<YEL<< tmp.getPhoneNumber() << NRM<<std::endl;
+		std::cout <<GRN<< "Darkest secret - " <<YEL<< tmp.getSecret() << NRM<<std::endl;
 	}
 	else
 	{
-		std::cout << "Table is empty!" << std::endl;
+		std::cout << "Table is empty!" << NRM<<std::endl;
 	}
 }
 
@@ -103,15 +103,15 @@ int main()
 	Phonebook phonebook;
 
 	system("Color 1A");
-	std::cout << GRN<< "Command info: " << std::endl;
-	std::cout << " -ADD: add a contact to the phonebook" << std::endl;
-	std::cout << " -SEARCH: search for a contact in the phonebook" << std::endl;
-	std::cout << " -EXIT: quit the program" << std::endl;
+	std::cout << GRN<< "Command info: " << NRM<<std::endl;
+	std::cout << " -ADD: add a contact to the phonebook" << NRM<<std::endl;
+	std::cout << " -SEARCH: search for a contact in the phonebook" << NRM<<std::endl;
+	std::cout << " -EXIT: quit the program" << NRM<<std::endl;
 
 	while (!std::cin.eof())
 	{
 		std::string command;
-		std::cout <<GRN<< std::endl << "Enter a command: "<<YEL;
+		std::cout <<GRN<< NRM<<std::endl << "Enter a command: "<<YEL;
 		std::getline(std::cin, command);
 		std::cout << GRN;
 		if (command == "ADD")

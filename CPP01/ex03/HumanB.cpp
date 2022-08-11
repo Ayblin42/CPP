@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 16:13:56 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/30 16:19:03 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/11 15:13:21 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	HumanB::attack()
 {
-	std::cout<< this->_name <<attacks with their << this->weapon.type <<std::endl;
+	std::cout<< this->_name <<attacks with their << this->weapon.type <<NRM<<std::endl;
 }
