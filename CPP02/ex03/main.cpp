@@ -6,35 +6,20 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 15:23:49 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/10 18:28:19 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/11 01:28:43 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-int main( void ) {
-Fixed a;
-Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-std::cout << a << std::endl;
-std::cout << ++a << std::endl;
-std::cout << a << std::endl;
-std::cout << a++ << std::endl;
-std::cout << a << std::endl;
-std::cout << b << std::endl;
-std::cout << Fixed::max( a, b ) << std::endl;
-return 0;
+int main( void )
+{
+	const Point a(1.f, 1.f);
+	const Point b(4.f, 2.f);
+	const Point c(2.5f, 3.f);
+	const Point p1(2.f, 2.f);
+	const Point p2;
+
+	std::cout << "p1 is " << (bsp(a, b, c, p1) ? "in" : "not in") << " the triangle" << std::endl;
+	std::cout << "p2 is " << (bsp(a, b, c, p2) ? "in" : "not in") << " the triangle" << std::endl;
 }
-
-
-
- A = (0, 0),  = p2
- B = (10, 30), = p3
- C = (20, 0),
-
-  P(11, 15)
-
-return (11 - 10)* (15 - 30) * (0 - 30) - (0- 10) ;
-
-
-return (p1.x - p3.x)* (p1.y - p3.y) * (p2.y - p3.y) - (p2.x - p3.x) ;
