@@ -8,7 +8,7 @@ SRCS		=	main.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	REF
+NAME		=	replace
 
 all			:		${NAME}
 

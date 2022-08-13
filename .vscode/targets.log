@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 15:29:47 2022
+# Make data base, printed on Sat Aug 13 16:23:27 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:1899951
+JOURNAL_STREAM = 9:2526756
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -53,7 +53,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+IM_CONFIG_PHASE = 1
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -63,13 +63,13 @@ XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/ayblin/.local/
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/40531/bus
 # environment
-MANAGERPID = 335436
+MANAGERPID = 426888
 # environment
 VSCODE_CWD = /mnt/nfs/homes/ayblin/CPP
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session5
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_40531_U752ny
+KRB5CCNAME = FILE:/tmp/krb5cc_40531_5X5WCf
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -79,7 +79,7 @@ GPG_AGENT_INFO = /run/user/40531/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r7p21.clusters.42paris.fr:@/tmp/.ICE-unix/335839,unix/e1r7p21.clusters.42paris.fr:/tmp/.ICE-unix/335839
+SESSION_MANAGER = local/e1r3p11.clusters.42paris.fr:@/tmp/.ICE-unix/427377,unix/e1r3p11.clusters.42paris.fr:/tmp/.ICE-unix/427377
 # environment
 XDG_RUNTIME_DIR = /run/user/40531
 # environment
@@ -87,7 +87,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 3602e48dafda45cb924bd8640d677987
+INVOCATION_ID = 14837d0ecae846af945acfeb37f25a76
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -100,8 +100,6 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/40531/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 337688
 # automatic
 %F = $(notdir $%)
 # environment
@@ -111,7 +109,7 @@ PWD = /mnt/nfs/homes/ayblin/CPP
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 335784
+SSH_AGENT_PID = 427306
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -123,11 +121,11 @@ HOME = /mnt/nfs/homes/ayblin
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/ayblin/.config/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/ayblin/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LOGNAME = ayblin
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /mnt/nfs/homes/ayblin/.oh-my-zsh
 # environment
@@ -148,8 +146,6 @@ MAKECMDGOALS := all
 QT_IM_MODULE = ibus
 # environment
 SHLVL = 2
-# environment
-IM_CONFIG_PHASE = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -175,10 +171,11 @@ OLDPWD = /mnt/nfs/homes/ayblin
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/40531/vscode-0ba95cf6-1.70.1-main.sock
+VSCODE_IPC_HOOK = /run/user/40531/vscode-0ba95cf6-1.69.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
+ 
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
@@ -188,8 +185,6 @@ MFLAGS = -pqrR
 GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
-# environment
-NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # environment
@@ -205,11 +200,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/5466a08f_1ade_483d_b4df_cbe18bd8f5ef
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/565f4b98_8d53_4694_ae12_1d7f96aebb23
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.147
+GNOME_TERMINAL_SERVICE = :1.96
 # default
 SUFFIXES := 
 # environment
@@ -227,9 +222,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/40531/docker.sock
 # environment
-VSCODE_PID = 337688
+VSCODE_PID = 429762
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=11/130=8%
+# Load=105/1024=10%, Rehash=0, Collisions=10/127=8%
 
 # Pattern-specific Variable Values
 
@@ -282,7 +277,6 @@ GNUmakefile:
 #  Failed to be updated.
 
 # files hash-table stats:
- 
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -296,6 +290,6 @@ GNUmakefile:
 # strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Thu Aug 11 15:29:47 2022
+# Finished Make data base on Sat Aug 13 16:23:27 2022
 
  

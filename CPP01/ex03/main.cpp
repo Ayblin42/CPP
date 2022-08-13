@@ -6,9 +6,14 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 10:01:07 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/30 12:57:14 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/04 14:46:21 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+
 
 int main()
 {

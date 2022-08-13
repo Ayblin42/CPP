@@ -6,28 +6,29 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 12:52:17 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/30 12:59:20 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/04 15:08:52 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
 
-void	Weapon()
+Weapon::Weapon(std::string type) :
+	type(type)
 {
 
 }
 
-void	~Weapon()
+Weapon::~Weapon()
 {
 
 }
 
-std::string	&stgetType() const
+std::string	&Weapon::getType()
 {
-	std::string	&ref = this->type;
-	return (ref);
+	return ( this->type);
 }
 
-void	setType(std::string str)
+void	Weapon::setType(std::string str)
 {
 	this->type = str;
 }

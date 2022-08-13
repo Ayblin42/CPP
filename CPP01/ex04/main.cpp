@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:47:40 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/11 15:13:21 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/13 16:29:40 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@
 int main(int ac, char **av)
 {
 	if (ac != 4)
-		return(std::cout << "  invalid number of arguments"<< NRM<<std::endl,0);
+		return(std::cout << "  invalid number of arguments"<<std::endl,0);
 	std::string filename(av[1]);
 	std::string s1(av[2]);
 	std::string s2(av[3]);
 	std::string line;
-	std::size_t found;
+	std::size_t found = 0;
+	std::size_t add = 0;
 	std::ofstream ofs(filename.append(".replace").data());
-	std::ifstream ifs("numbers");
+	std::ifstream ifs(av[1]);
 
 	if (!ifs.good())
-		return(std::cout << "invalid file name "<< NRM<<std::endl,0);
+		return(std::cout << "invalid file name "<<std::endl,0);
 	while(ifs.good())
 	{
 		std::getline(ifs,line);
@@ -35,9 +36,11 @@ int main(int ac, char **av)
 		{
 			line.erase(found, s1.length());
 			line.insert(found, s2);
-			found = line.find(s1, found);
+			add = found+s1.length();
+			found = line.find(s1, found + add);
+			std::cout << "FOUND2  =  "<<found<<std::endl;
 		}
-		ofs << line<< NRM<<std::endl;
+		ofs << line<<std::endl;
 	}
 	ifs.close();
 	ofs.close();

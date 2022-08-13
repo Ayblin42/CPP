@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 10:01:21 by ayblin            #+#    #+#             */
-/*   Updated: 2022/07/30 13:10:40 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/04 15:08:36 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,17 @@ class Weapon
 {
 public:
 
-	Weapon();
+	Weapon(std::string type);
 	~Weapon();
 
 	//getters
-	std::string	&stgetType() const;
+	std::string	&getType();
 	//setters
 		void	setType(std::string str);
 
 private :
 
 	std::string type;
-}
+};
 
 #endif
