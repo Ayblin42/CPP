@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 12:12:38 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/11 15:13:21 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/14 13:25:07 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	main()
 	std::string	*stringPTR = &str;
 	std::string	&stringREF = str;
 
-	std::cout << &str <<NRM<<std::endl;
-	std::cout << stringPTR <<NRM<<std::endl;
-	std::cout << &stringREF <<NRM<<std::endl;
+	std::cout << &str <<std::endl;
+	std::cout << stringPTR <<std::endl;
+	std::cout << &stringREF <<std::endl;
 
-	std::cout << str <<NRM<<std::endl;
-	std::cout << *stringPTR <<NRM<<std::endl;
-	std::cout << stringREF <<NRM<<std::endl;
+	std::cout << str <<std::endl;
+	std::cout << *stringPTR <<std::endl;
+	std::cout << stringREF <<std::endl;
 }

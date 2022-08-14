@@ -1,31 +1,34 @@
+NAME		=	Zombie
+
 CC			=	c++
+CPPFLAGS	=	-Wall -Werror -Wextra -std=c++98
+RM			=	rm -rf
 
-FLAGS		=	-Wall -Werror -Wextra -std=c++98
-
-RM			=	rm -f
-
-SRCS		=	Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS		=	main.cpp \
+				newZombie.cpp \
+				randomChump.cpp \
+				Zombie.cpp \
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	Zombie
+all:		$(NAME)
 
-all			:		${NAME}
-
-${NAME}		:	 ${OBJS}
-				${CC} ${FLAGS} ${OBJS} -o ${NAME}
-
-.c.o		:
-				${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
-clean		:
-				${RM} ${OBJS}
+$(NAME):	$(OBJS)
+			$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 
-fclean		:	clean
-				${RM} ${NAME}
+.cpp.o:
+			$(CC) $(CPPFLAGS) -c $< -o $(<:.cpp=.o)
 
 
-re			:	fclean	all
+clean:
+			$(RM) $(OBJS)
 
-.PHONY		:	all clean fclean re libft
+
+fclean:		clean
+			$(RM) $(NAME)
+
+
+re:			fclean all
+
+.PHONY:		fclean, all, re

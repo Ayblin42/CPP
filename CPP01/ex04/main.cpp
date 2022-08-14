@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 17:47:40 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/13 16:29:40 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:14:22 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int main(int ac, char **av)
 			line.insert(found, s2);
 			add = found+s1.length();
 			found = line.find(s1, found + add);
-			std::cout << "FOUND2  =  "<<found<<std::endl;
 		}
 		ofs << line<<std::endl;
 	}
