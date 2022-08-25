@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 13 16:23:27 2022
+# Make data base, printed on Wed Aug 17 21:11:48 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:2526756
+JOURNAL_STREAM = 9:9757057
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -63,13 +63,13 @@ XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/ayblin/.local/
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/40531/bus
 # environment
-MANAGERPID = 426888
+MANAGERPID = 1681607
 # environment
 VSCODE_CWD = /mnt/nfs/homes/ayblin/CPP
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session25
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_40531_5X5WCf
+KRB5CCNAME = FILE:/tmp/krb5cc_40531_3zPLQI
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -79,7 +79,7 @@ GPG_AGENT_INFO = /run/user/40531/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r3p11.clusters.42paris.fr:@/tmp/.ICE-unix/427377,unix/e1r3p11.clusters.42paris.fr:/tmp/.ICE-unix/427377
+SESSION_MANAGER = local/e1r3p5.clusters.42paris.fr:@/tmp/.ICE-unix/1682116,unix/e1r3p5.clusters.42paris.fr:/tmp/.ICE-unix/1682116
 # environment
 XDG_RUNTIME_DIR = /run/user/40531
 # environment
@@ -87,7 +87,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 14837d0ecae846af945acfeb37f25a76
+INVOCATION_ID = 08d04decc80841c8b0147d7a9cf62ef3
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,7 +109,7 @@ PWD = /mnt/nfs/homes/ayblin/CPP
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 427306
+SSH_AGENT_PID = 1682086
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -175,7 +175,6 @@ VSCODE_IPC_HOOK = /run/user/40531/vscode-0ba95cf6-1.69.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
- 
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
@@ -200,11 +199,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/565f4b98_8d53_4694_ae12_1d7f96aebb23
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/c612b741_41aa_4089_9c9a_053e3af86381
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.96
+GNOME_TERMINAL_SERVICE = :1.85
 # default
 SUFFIXES := 
 # environment
@@ -222,7 +221,7 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/40531/docker.sock
 # environment
-VSCODE_PID = 429762
+VSCODE_PID = 1683610
 # variable set hash-table stats:
 # Load=105/1024=10%, Rehash=0, Collisions=10/127=8%
 
@@ -232,9 +231,9 @@ VSCODE_PID = 429762
 
 # Directories
 
-# . (device 59, inode 206245968): 8 files, no impossibilities.
+# . (device 59, inode 218334377): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -282,14 +281,15 @@ GNUmakefile:
 
 # No 'vpath' search paths.
 
+ 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 127 B / avg = 7 B
-# current buf: size = 8162 B / used = 127 B / count = 16 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 133 B / avg = 7 B
+# current buf: size = 8162 B / used = 133 B / count = 17 / avg = 7 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Sat Aug 13 16:23:27 2022
+# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
+# Finished Make data base on Wed Aug 17 21:11:48 2022
 
  

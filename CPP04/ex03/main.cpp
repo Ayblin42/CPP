@@ -6,15 +6,32 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 13:21:35 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/17 13:23:15 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 21:03:54 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "AMateria.hpp"
 #include "Ice.hpp"
-
-int	main()
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+int main()
 {
-	Ice ice();
+	IMateriaSource* src = new MateriaSource();
+	ICharacter* bob = new Character("bob");
+	Cure c;
+	c.use(*bob);
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	me->use(0, *bob);
+	me->use(1, *bob);
+	delete bob;
+	delete me;
+	delete src;
+	return 0;
 }

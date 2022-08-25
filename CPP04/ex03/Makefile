@@ -1,10 +1,10 @@
 CC			=	c++
 
-FLAGS		=	-Wall -Werror -Wextra -std=c++98
+FLAGS		=	-Wall -Werror -Wextra -std=c++98 -g3
 
 RM			=	rm -f
 
-SRCS		=	main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp ICharacter.cpp
+SRCS		=	main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 

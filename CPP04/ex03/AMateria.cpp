@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Materia.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 13:21:46 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/17 14:55:25 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 20:26:51 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ AMateria  &AMateria::operator=(const AMateria	&rhs) // Operator d’affectation
 std::string const  &AMateria::getType() const
 {
 	return this->_type;
+}
+
+void AMateria::use(ICharacter& target)
+{
+	(void)target;
 }

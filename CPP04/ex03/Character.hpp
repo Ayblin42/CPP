@@ -6,12 +6,11 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 14:05:00 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/17 14:57:46 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 20:26:51 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#pragma once
 
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
@@ -31,7 +30,6 @@ public:
 	void use(int idx, ICharacter &target);
 private:
 	std::string _name;
-	AMateria *_materia[4];
+	AMateria *_AMateria[4];
 };
 
-#endif

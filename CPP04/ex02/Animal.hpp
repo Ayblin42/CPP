@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 13:26:07 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/16 22:32:54 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 22:21:29 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
 	Animal &operator=(const Animal&rhs);
 
 	std::string getType() const;
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 protected:
 	std::string _type;
 

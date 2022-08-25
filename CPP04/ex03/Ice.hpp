@@ -6,15 +6,13 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 13:21:56 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/17 14:59:26 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 20:26:51 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_H
-#define ICE_H
+#pragma once
 
 #include "AMateria.hpp"
-#include "Character.hpp"
 
 class Ice : public AMateria
 {
@@ -27,5 +25,3 @@ public:
 	AMateria* clone() const;
 	void use(ICharacter &target);
 };
-
-#endif

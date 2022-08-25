@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/nfs/homes/ayblin/CPP/CPP05/ex02'
+c++ -Wall -Werror -Wextra -std=c++98 -c main.cpp -o main.o
+c++ -Wall -Werror -Wextra -std=c++98 -c Bureaucrat.cpp -o Bureaucrat.o
+c++ -Wall -Werror -Wextra -std=c++98 -c Form.cpp -o Form.o
+c++ -Wall -Werror -Wextra -std=c++98 -c ShrubberyCreationForm.cpp -o ShrubberyCreationForm.o
+c++ -Wall -Werror -Wextra -std=c++98 main.o Bureaucrat.o Form.o ShrubberyCreationForm.o -o a.out
+make: Leaving directory '/mnt/nfs/homes/ayblin/CPP/CPP05/ex02'
+ 

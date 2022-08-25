@@ -15,8 +15,8 @@ all			:		${NAME}
 ${NAME}		:	 ${OBJS}
 				${CC} ${FLAGS} ${OBJS} -o ${NAME}
 
-.c.o		:
-				${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+.cpp.o		:
+				${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 clean		:
 				${RM} ${OBJS}

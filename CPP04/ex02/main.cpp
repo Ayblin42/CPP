@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 13:24:13 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/16 23:07:30 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 22:21:00 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,27 @@
 
 int main()
 {
-	Animal* animals[10];
+	Animal	chat("chat");
+	// Animal* animals[10];
 
-	for (int i = 0; i < 10; i++)
-	{
-		if (i >= 5)
-			animals[i] =  new Dog();
-		else
-			animals[i] =  new Cat();
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		std::cout << GRN << "animal number"<<i<<" is a "<<animals[i]->getType()<<NRM<<std::endl;
-		delete animals[i];
-	}
+	// for (int i = 0; i < 10; i++)
+	// {
+	// 	if (i >= 5)
+	// 		animals[i] =  new Dog();
+	// 	else
+	// 		animals[i] =  new Cat();
+	// }
+	// for (int i = 0; i < 10; i++)
+	// {
+	// 	std::cout << GRN << "animal number"<<i<<" is a "<<animals[i]->getType()<<NRM<<std::endl;
+	// 	delete animals[i];
+	// }
 
-	Cat chatpuant("chat_puant");
-	Cat chatmoche("chat_moche");
-	std::cout << GRN << chatmoche.getType() <<std::endl;
-	chatmoche = chatpuant;
-	std::cout << GRN << chatmoche.getType() << NRM <<std::endl;
-	return 0;
+	// Cat chatpuant("chat_puant");
+	// Cat chatmoche("chat_moche");
+	// std::cout << GRN << chatmoche.getType() <<std::endl;
+	// chatmoche = chatpuant;
+	// std::cout << GRN << chatmoche.getType() << NRM <<std::endl;
+	// return 0;
 }
 

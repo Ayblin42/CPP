@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 13:26:36 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/16 14:17:34 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 22:16:00 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ Cat  &Cat::operator=(const Cat	&rhs) // Operator d’affectation
 
 void Cat::makeSound() const
 {
-	std::cout << "MIAOU MIAOU" << std::endl;
+	std::cout << GRN <<"MIAOU MIAOU" << NRM <<std::endl;
 }

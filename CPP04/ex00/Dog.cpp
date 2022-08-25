@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 13:26:19 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/16 14:17:24 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 22:16:16 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ Dog  &Dog::operator=(const Dog	&rhs) // Operator d’affectation
 
 void Dog::makeSound() const
 {
-	std::cout << "WOAFF WOAFF" << std::endl;
+	std::cout <<GRN<< "WOAFF WOAFF" <<NRM<< std::endl;
 }

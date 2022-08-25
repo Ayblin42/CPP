@@ -1,5 +1,16 @@
-#ifndef CURE_H
-#define CURE_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/17 19:03:56 by ayblin            #+#    #+#             */
+/*   Updated: 2022/08/17 20:26:51 by ayblin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
 
 #include "AMateria.hpp"
 
@@ -14,5 +25,3 @@ public:
 	AMateria* clone() const;
 	void use(ICharacter &target);
 };
-
-#endif

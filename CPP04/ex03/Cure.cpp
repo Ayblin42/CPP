@@ -6,12 +6,11 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 13:32:28 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/17 14:59:56 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/17 21:06:45 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
-#include "Character.hpp"
 
 Cure::Cure()
 	:AMateria("cure")
@@ -40,7 +39,7 @@ AMateria* Cure::clone() const
 	return new Cure(*this);
 }
 
-void use(ICharacter &target)
+void Cure::use(ICharacter &target)
 {
-	std::cout<<"* heals "<<target.getName()<<"'s wounds *"<<std::endl;
+	std::cout<<MAG<<"* heals "<<target.getName()<<"'s wounds *"<<NRM<<std::endl;
 }
