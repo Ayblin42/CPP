@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:38:42 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/26 23:04:47 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/08/31 11:39:32 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ Form *Intern::makeForm(std::string const & formulaire, std::string const &  targ
 {
 	Form *ret = 0;
 	std::string formlist[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-	for(int i = 0; i<3 && formlist[i] != formulaire ; i++)
+	int i = 0;
+	for(i=0; i<3 && formlist[i] != formulaire ; i++){}
+
 	switch (i)
 	{
 		case 0:

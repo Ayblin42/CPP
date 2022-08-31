@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 06:59:50 2022
+# Make data base, printed on Fri Aug 26 22:06:32 2022
 
 # Variables
 
@@ -47,7 +47,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:1988010
+JOURNAL_STREAM = 9:67497
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -65,13 +65,13 @@ XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/ayblin/.local/
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/40531/bus
 # environment
-MANAGERPID = 120691
+MANAGERPID = 5133
 # environment
 VSCODE_CWD = /mnt/nfs/homes/ayblin/CPP/CPP05
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_40531_BJU6Bg
+KRB5CCNAME = FILE:/tmp/krb5cc_40531_GiWxnI
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -81,7 +81,7 @@ GPG_AGENT_INFO = /run/user/40531/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r8p13.clusters.42paris.fr:@/tmp/.ICE-unix/121227,unix/e1r8p13.clusters.42paris.fr:/tmp/.ICE-unix/121227
+SESSION_MANAGER = local/e1r5p23.clusters.42paris.fr:@/tmp/.ICE-unix/5679,unix/e1r5p23.clusters.42paris.fr:/tmp/.ICE-unix/5679
 # environment
 XDG_RUNTIME_DIR = /run/user/40531
 # environment
@@ -89,7 +89,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 6e209091f79a4bc6b920c116d4096e3e
+INVOCATION_ID = c867b2d1ccbc43fdb3b60756d3a1d711
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,7 +111,7 @@ PWD = /mnt/nfs/homes/ayblin/CPP/CPP05
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 121191
+SSH_AGENT_PID = 5642
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -165,7 +165,7 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/ayblin
+OLDPWD = /mnt/nfs/homes/ayblin/CPP
 # default
 .VARIABLES := 
 # automatic
@@ -203,11 +203,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0c52bb65_4db9_48c6_a530_78822015af1a
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/137324a6_9070_4f87_ad91_c2c0cbb0d90d
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.95
+GNOME_TERMINAL_SERVICE = :1.97
 # default
 SUFFIXES := 
 # environment
@@ -225,7 +225,7 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/40531/docker.sock
 # environment
-VSCODE_PID = 122918
+VSCODE_PID = 10015
 # variable set hash-table stats:
 # Load=107/1024=10%, Rehash=0, Collisions=10/129=8%
 
@@ -235,7 +235,7 @@ VSCODE_PID = 122918
 
 # Directories
 
-# . (device 57, inode 237798944): 8 files, no impossibilities.
+# . (device 59, inode 237798944): 8 files, no impossibilities.
 
 # 8 files, no impossibilities in 1 directories.
 
@@ -284,16 +284,16 @@ GNUmakefile:
 # VPATH Search Paths
 
 # No 'vpath' search paths.
- 
 
 # No general ('VPATH' variable) search path.
 
+ 
 # strcache buffers: 1 (0) / strings = 16 / storage = 133 B / avg = 8 B
 # current buf: size = 8162 B / used = 133 B / count = 16 / avg = 8 B
 
 # strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Thu Aug 25 06:59:50 2022
+# Finished Make data base on Fri Aug 26 22:06:32 2022
 
  

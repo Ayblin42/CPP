@@ -5,31 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 21:27:02 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/31 11:44:02 by ayblin           ###   ########.fr       */
+/*   Created: 2022/08/31 06:38:15 by ayblin            #+#    #+#             */
+/*   Updated: 2022/08/31 08:22:39 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "Intern.hpp"
+#include "ScalarConversion.hpp"
 
-int main()
+int	main(int ac, char **av)
 {
-	Bureaucrat Damien("Damien", 4);
-	Intern someRandomIntern;
-	Form* rrf;
+	(void)ac;
 	try
 	{
-	rrf = someRandomIntern.makeForm("presidential pardon", "Trouduc");
-	Damien.signForm(*rrf);
-	rrf->execute(Damien);
+		std::string s(av[1]);
+		ScalarConversion conv(s);
+		std::cout << conv<<std::endl;
 	}
-	catch(std::exception & e)
+	catch(const std::exception& e)
 	{
-		std::cerr <<RED<< "Cannot initialize test because " << e.what() <<NRM<< std::endl;
+		std::cerr << e.what() << '\n';
 	}
+
 }
