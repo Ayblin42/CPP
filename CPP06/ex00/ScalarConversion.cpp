@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 01:11:52 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/31 12:26:42 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/09/04 12:45:16 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,54 +22,17 @@ ScalarConversion::ScalarConversion(std::string &argv)
 {
 	if (argv.empty())
 		throw ScalarConversion::InvalidInput();
-	else if (argv.size() == 1)
-	{
-		if (isdigit(argv.front()))
-		{
-			this->_intvalue = static_cast<int>(strtol(argv.c_str(), NULL, 10));
-			this->_type = intType;
-		}
-		else
-		{
-			this->_charvalue = argv.front();
-			this->_type = charType;
-		}
-	}
-	else
-	{
-		char *longEndptr;
-		char *doubleEndptr;
-		long longArg = strtol(argv.c_str(), &longEndptr, 10);
-		double doubleArg = strtof(argv.c_str(), &doubleEndptr);
-		if (*longEndptr)
-		{
-			if(*doubleEndptr){
-				if(*doubleEndptr == 'f'){
-					this->_floatvalue= static_cast<float>(doubleArg);
-					this->_type = floatType;}
-				else
-					throw ScalarConversion::InvalidInput();
-			}
-			else{
-				this->_doublevalue = doubleArg;
-				this->_type = doubleType;
-			}
-		}
-		else{
-			this->_intvalue = static_cast<int>(longArg);
-			this->_type = intType;
-		}
-	}
-	this->_safe = std::stold(argv.c_str());
+	this->_doublevalue = strtod(argv.c_str(), NULL);
+	this->_type = intType;
 }
 
 // ScalarConversion::ScalarConversion( const ScalarConversion & src )
 // {
 // 	this->_argv = src._argv;
-// 	this->_intvalue = src._intvalue;
+// 	this->_doublevalue = src._doublevalue;
 // 	this->_charvalue = src._charvalue;
 // 	this->_doublevalue = src._doublevalue;
-// 	this->_floatvalue = src._floatvalue;
+// 	this->_doublevalue = src._doublevalue;
 // }
 
 
@@ -88,38 +51,77 @@ ScalarConversion::~ScalarConversion()
 
 std::ostream &			operator<<( std::ostream & o, ScalarConversion const & i )
 {
-	o <<BGREEN<< "Char = ";
-	try{char c; c =i.ConvertToChar();o<<BYELLOW<<c;}
-	catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
-	std::cout<< std::endl;
+	if(i._argv == "+inf" || i._argv == "+inff" || i._argv == "-inf" || i._argv == "-inff" || i._argv == "nan" || i._argv == "nanf")
+	{
+		if(i._argv =="+inf"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: inf " << std::endl;
+			o << "double: inf"<< std::endl;}
+		if(i._argv =="+inff"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: inf"  << std::endl;
+			o << "double: inf" << std::endl;}
+		if(i._argv =="-inf"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: -inf"  << std::endl;
+			o << "double: -inf" << std::endl;}
+		if(i._argv =="-inff"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: -inf"  << std::endl;
+			o << "double: -inf" << std::endl;}
+		if(i._argv =="nan"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: nan"  << std::endl;
+			o << "double: nan" << std::endl;}
+		if(i._argv =="nanf"){
+			o << "char: impossible" << std::endl;
+			o << "int: impossible" << std::endl;
+			o << "float: nan"  << std::endl;
+			o << "double: nan" << std::endl;}
+		return o;
+	}
+	else
+	{
+		o <<BGREEN<< "Char = ";
+		try{char c; c =i.ConvertToChar();o<<BYELLOW<<c;}
+		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
+		std::cout<< std::endl;
 
-	o <<BGREEN<< "INT = ";
-	try{int nb ; nb = i.ConvertToInt() ; o<<BYELLOW<<nb ;}
-	catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
-	std::cout<< std::endl;
+		o <<BGREEN<< "INT = ";
+		try{int nb ; nb = i.ConvertToInt() ; o<<BYELLOW<<nb ;}
+		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
+		std::cout<< std::endl;
 
-	o <<BGREEN<< "DOUBLE = ";
-	try{
-		double nb;
-		nb = i.ConvertToDouble();
-		double intPart;
-		if (modf(nb, &intPart) == 0)
-			o.precision(1);
-		o<<std::fixed<<BYELLOW<<nb ;
-		}
-	catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
-	std::cout<< std::endl;
+		o <<BGREEN<< "DOUBLE = ";
+		try{
+			double nb;
+			nb = i.ConvertToDouble();
+			double intPart;
+			if (modf(nb, &intPart) == 0){
+				o.precision(1);
+				o<<std::fixed<<BYELLOW<<nb ;}
+			else
+				o<<static_cast<float>(i._doublevalue)<<std::endl;
+			}
+		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
+		std::cout<< std::endl;
 
-	o <<BGREEN<< "FLOAT = ";
-	try{
-		float nb ;
-		nb = i.ConvertToFloat() ;
-		double intPart;
-		if (modf(nb, &intPart) == 0)
-			o.precision(1);
-		o<<std::fixed<<BYELLOW<<nb<<'f' ;
-		}
-	catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
+		o <<BGREEN<< "FLOAT = ";
+		try{
+			float nb ;
+			nb = i.ConvertToFloat() ;
+			double intPart;
+			if (modf(nb, &intPart) == 0)
+				o.precision(1);
+			o<<std::fixed<<BYELLOW<<nb<<'f' ;
+			}
+		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
+	}
 
 	return o;
 }
@@ -130,91 +132,79 @@ std::ostream &			operator<<( std::ostream & o, ScalarConversion const & i )
 */
 char		ScalarConversion::ConvertToChar() const
 {
-	if ( this->_safe > 256 || this->_safe < 0)
+	if ( this->_doublevalue > 256 || this->_doublevalue < 0)
 		throw ScalarConversion::ImpossibleExeption();
 	char c;
-	switch (this->_type)
-	{
-		case(charType):
-			return this->_charvalue;
-		case(intType):
-			c = static_cast<char>(this->_intvalue);
-			if (isprint(c))
-				return c;
-			else
-				throw ScalarConversion::NonDisplayableExeption();
-		case(floatType):
-				c = static_cast<char>(this->_floatvalue);
-				if (isprint(c))
-					return c;
-				else
-					throw ScalarConversion::NonDisplayableExeption();
-		case(doubleType):
-				c = static_cast<char>(this->_doublevalue);
-				if (isprint(c))
-					return c;
-				else
-					throw ScalarConversion::NonDisplayableExeption();
-	}
+	c = static_cast<char>(this->_doublevalue);
+	if (isprint(c))
+		return c;
+	else
+		throw ScalarConversion::NonDisplayableExeption();
+	//switch (this->_type)
+	//{
+	//	case(charType):
+	//		return this->_charvalue;
+	//	case(intType):
+	//		c = static_cast<char>(this->_doublevalue);
+	//		if (isprint(c))
+	//			return c;
+	//		else
+	//			throw ScalarConversion::NonDisplayableExeption();
+	//	case(floatType):
+	//			c = static_cast<char>(this->_doublevalue);
+	//			if (isprint(c))
+	//				return c;
+	//			else
+	//				throw ScalarConversion::NonDisplayableExeption();
+	//	case(doubleType):
+	//			c = static_cast<char>(this->_doublevalue);
+	//			if (isprint(c))
+	//				return c;
+	//			else
+	//				throw ScalarConversion::NonDisplayableExeption();
+	//	default:
+	//		return 0;
+	//}
 }
 
 int			ScalarConversion::ConvertToInt() const
 {
-	if ( this->_safe > std::numeric_limits<int>::max()|| this->_safe < std::numeric_limits<int>::min())
+	if ( this->_doublevalue > std::numeric_limits<int>::max()|| this->_doublevalue < std::numeric_limits<int>::min())
 		throw ScalarConversion::ImpossibleExeption();
-	switch (this->_type)
-	{
-		case(charType):
-			return static_cast<int>(this->_charvalue);
-		case(intType):
-			return this->_intvalue;
-		case(floatType):
-			if (this->_floatvalue > static_cast<float>(2147483647)|| this->_floatvalue < static_cast<float>(-2147483648))
-				throw ScalarConversion::ImpossibleExeption();
-			else
-				return static_cast<int>(this->_floatvalue);
-		case(doubleType):
-			if (this->_doublevalue > static_cast<float>(2147483647)|| this->_doublevalue < static_cast<float>(-2147483648))
-				throw ScalarConversion::ImpossibleExeption();
-			else
-				return static_cast<int>(this->_doublevalue);
-	}
+	if (this->_doublevalue > static_cast<float>(2147483647)|| this->_doublevalue < static_cast<float>(-2147483648))
+		throw ScalarConversion::ImpossibleExeption();
+	else
+		return static_cast<int>(this->_doublevalue);
+	//switch (this->_type)
+	//{
+	//	case(charType):
+	//		return static_cast<int>(this->_charvalue);
+	//	case(intType):
+	//		return this->_doublevalue;
+	//	case(floatType):
+	//		if (this->_doublevalue > static_cast<float>(2147483647)|| this->_doublevalue < static_cast<float>(-2147483648))
+	//			throw ScalarConversion::ImpossibleExeption();
+	//		else
+	//			return static_cast<int>(this->_doublevalue);
+	//	case(doubleType):
+	//		if (this->_doublevalue > static_cast<float>(2147483647)|| this->_doublevalue < static_cast<float>(-2147483648))
+	//			throw ScalarConversion::ImpossibleExeption();
+	//		else
+	//			return static_cast<int>(this->_doublevalue);
+	//	default:
+	//		return 0;
+	//}
 }
 
 double		ScalarConversion::ConvertToDouble() const
 {
-		if ( this->_safe >  DBL_MAX|| this->_safe < DBL_MIN)
-		throw ScalarConversion::ImpossibleExeption();
-	switch (this->_type)
-	{
-		case(charType):
-			return static_cast<double>(this->_charvalue);
-		case(intType):
-			return static_cast<double>(this->_intvalue);
-		case(floatType):
-			return static_cast<double>(this->_floatvalue);
-		case(doubleType):
-			return this->_doublevalue;
-	}
+	return static_cast<double>(this->_doublevalue);
 }
 
 
 float		ScalarConversion::ConvertToFloat() const
 {
-
-	if ( this->_safe >  std::numeric_limits<float>::max() || this->_safe < std::numeric_limits<float>::min())
-		throw ScalarConversion::ImpossibleExeption();
-	switch (this->_type)
-	{
-		case(charType):
-			return static_cast<float>(this->_charvalue);
-		case(intType):
-			return static_cast<float>(this->_intvalue);
-		case(floatType):
-			return this->_floatvalue;
-		case(doubleType):
-			return static_cast<float>(this->_doublevalue);
-	}
+	return static_cast<float>(this->_doublevalue);
 }
 
 /*

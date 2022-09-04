@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 01:11:57 by ayblin            #+#    #+#             */
-/*   Updated: 2022/08/31 11:40:11 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/09/04 11:36:55 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,9 @@ class ScalarConversion
 					return ("Non Displayable");
 				}
 		};
-	private:
 
 	const 	std::string&	_argv;
-	char	_charvalue;
-	int		_intvalue;
 	double	_doublevalue;
-	float	_floatvalue;
-	long double _safe;
 	enum type {charType, intType, floatType, doubleType} _type;
 };
 
