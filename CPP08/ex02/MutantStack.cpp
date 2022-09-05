@@ -1,55 +1,13 @@
-#include "MutantStack.hpp"
-
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
-MutantStack::MutantStack()
-{
-}
-
-MutantStack::MutantStack( const MutantStack & src )
-{
-}
-
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
-MutantStack::~MutantStack()
-{
-}
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-MutantStack &				MutantStack::operator=( MutantStack const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
-}
-
-std::ostream &			operator<<( std::ostream & o, MutantStack const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
 /* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MutantStack.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/02 08:48:42 by ayblin            #+#    #+#             */
+/*   Updated: 2022/09/05 18:54:49 by ayblin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "MutantStack.hpp"
