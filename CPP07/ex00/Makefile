@@ -8,7 +8,7 @@ SRCS		=	main.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	convert
+NAME		=	template
 
 all			:		${NAME}
 

@@ -4,11 +4,11 @@ FLAGS		=	-Wall -Werror -Wextra
 
 RM			=	rm -f
 
-SRCS		=	main.cpp
+SRCS		=	 main.cpp
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 
-NAME		=	convert
+NAME		=	iter
 
 all			:		${NAME}
 

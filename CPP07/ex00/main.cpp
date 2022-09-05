@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 09:33:12 by ayblin            #+#    #+#             */
-/*   Updated: 2022/09/01 10:53:28 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/09/05 13:37:39 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int b = 3;
 std::cout << "a = " << a << ", b = " << b << std::endl;
 std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
 std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+std::cout <<std::endl;
 std::string c = "chaine1";
 std::string d = "chaine2";
 ::swap(c, d);

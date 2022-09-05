@@ -6,7 +6,7 @@
 /*   By: ayblin <ayblin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 01:11:52 by ayblin            #+#    #+#             */
-/*   Updated: 2022/09/04 12:45:16 by ayblin           ###   ########.fr       */
+/*   Updated: 2022/09/05 11:47:05 by ayblin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ std::ostream &			operator<<( std::ostream & o, ScalarConversion const & i )
 				o.precision(1);
 				o<<std::fixed<<BYELLOW<<nb ;}
 			else
-				o<<static_cast<float>(i._doublevalue)<<std::endl;
+				o<<(i._doublevalue)<<std::endl;
 			}
 		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
 		std::cout<< std::endl;
@@ -116,9 +116,11 @@ std::ostream &			operator<<( std::ostream & o, ScalarConversion const & i )
 			float nb ;
 			nb = i.ConvertToFloat() ;
 			double intPart;
-			if (modf(nb, &intPart) == 0)
+			if (modf(nb, &intPart) == 0){
 				o.precision(1);
-			o<<std::fixed<<BYELLOW<<nb<<'f' ;
+				o<<std::fixed<<BYELLOW<<nb<<'f' ;}
+			else
+				o<<static_cast<float>(i._doublevalue)<<std::endl;
 			}
 		catch(const std::exception& e){o << BRED<<e.what()<<BWHITE;}
 	}
